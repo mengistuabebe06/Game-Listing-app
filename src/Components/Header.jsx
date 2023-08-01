@@ -3,8 +3,7 @@ import logo from "../assets/images/logo.png";
 import { HiOutlineMagnifyingGlass, HiMoon, HiSun } from "react-icons/hi2";
 
 function Header() {
-
-  const [toogle, setToggle] = useState(false)
+  const [toogle, setToggle] = useState(false);
 
   return (
     <div className="flex items-center p-3">
@@ -17,12 +16,21 @@ function Header() {
         <input
           type="text"
           placeholder="Search Games"
-          className="px bg-transparent outline-none"
+          className="px bg-transparent dark:bg-gray-500 outline-none"
         />
       </div>
       <div className="bg-slate-300">
-        { toogle && <HiMoon onClick={()=> setToggle(false)}/>}
-        <HiSun onClick={()=> setToggle(true)}/>
+        {toogle ? (
+          <HiMoon
+            className="text-[35px] bg-slate-200 text-black p-1 rounded-full cursor-pointer"
+            onClick={() => setToggle(!toogle)}
+          />
+        ) : (
+          <HiSun
+            className="text-[35px] bg-slate-50 text-black p-1 rounded-full cursor-pointer"
+            onClick={() => setToggle(!toogle)}
+          />
+        )}
       </div>
     </div>
   );

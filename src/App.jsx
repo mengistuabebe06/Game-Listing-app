@@ -7,12 +7,12 @@ import Header from "./Components/Header";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [theam, setTheam] = useState("light");
   return (
-    <>
-      <Header/>
-      <Home/>
-    </>
+    <div className={`${theam} ${theam == 'dark'?'bg-[121212]':null} h-[100vh]`}>
+      <Header />
+      <Home />
+    </div>
   );
 }
 
