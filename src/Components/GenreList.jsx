@@ -19,7 +19,8 @@ function GenreList() {
     <div>
       <h2 className="text-[30px] font-bold dark:text-white">Genre</h2>
       {GenreList.map((items, index) => (
-        <div key={items.id}
+        <div
+          key={items.id}
           onClick={() => setActiveIndex(index)}
           className={`flex gap-2 items-center mb-2 cursor-pointer hover:bg-slate-400 p-2 group
         rounded-lg hover:dark:text-gray-600 ${
