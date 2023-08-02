@@ -8,7 +8,7 @@ import { ThemeContext } from "./Context/ThemeContext";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [theam, setTheam] = useState("light");
+  const [theam, setTheam] = useState("dark");
 
   useEffect(() => {
     setTheam(()=> localStorage.getItem('theme')?localStorage.getItem('theme'):'dark')
@@ -18,7 +18,7 @@ function App() {
       <div
         className={`${theam} ${
           theam == "dark"?"bg-black" : null
-        } h-[100vh]`}
+        } min-h-[100vh]`}
       >
         <Header />
         <Home />
