@@ -30,7 +30,7 @@ function Home() {
     getGameListByGenresId(4);
   }, []);
   return (
-    <div className="grid grid-cols-2 px-8">
+    <div className="grid grid-cols-[200px_minmax(900px,_1fr)_100px]">
       <div className="hidden md:block">
         <GenreList
           genresId={(genresId) => getGameListByGenresId(genresId)}
